@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   imageCounter = 0;
   images = ['jaguar', 'bugatti', 'ferrari', 'lambo'];
-  imageURL = 'url(\'../../assets/jaguar.jpg\')';
+  imageURL = 'url(\'assets/jaguar.jpg\')';
   cars;
 
 
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     } else if (this.imageCounter < 0) {
       this.imageCounter = 3;
     }
-    this.imageURL = 'url(\'../../assets/' + this.images[this.imageCounter] + '.jpg\')';
+    this.imageURL = 'url(\'assets/' + this.images[this.imageCounter] + '.jpg\')';
 
     switch (this.imageCounter) {
       case 0:
