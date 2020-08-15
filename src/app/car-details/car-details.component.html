@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="column" fxLayout="row">
+    <img [src]="car?.imageUrl" [alt]="car?.name" class="car-image">
+  </div>
+
+  <div class="column details">
+    <h1 class="car-name">{{car?.name}} </h1>
+    <p>{{car?.description}}</p>
+    <div class="price"><b>Price per Day:</b> £{{car?.pricePerDay}}</div>
+    <mat-form-field>
+      <mat-label>Number of Days</mat-label>
+      <input matInput type="number" min="1" oninput="validity.valid || (value='1')" [(ngModel)]="dayCount">
+    </mat-form-field>
+    <div>
+      <button mat-button (click)="bookClicked()">BOOK NOW £{{dayCount * car.pricePerDay}}</button>
+    </div>
+  </div>
+</div>

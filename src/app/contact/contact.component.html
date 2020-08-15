@@ -1,0 +1,23 @@
+<h1>Contact Us</h1>
+<div class="form" fxLayout="column">
+  <form [formGroup]="myForm">
+    <div fxLayout="row">
+      <mat-form-field class="b">
+        <input  matInput type="text" placeholder="Name" formControlName="name" required>
+        <mat-error>Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Email" formControlName="email" required>
+        <mat-error *ngIf="myForm.controls['email'].hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="myForm.controls['email'].hasError('email')">Email must be valid</mat-error>
+      </mat-form-field>
+    </div>
+    <mat-form-field class="textArea">
+      <textarea matInput placeholder="Enter your query here..." formControlName="text" cdkTextareaAutosize cdkAutosizeMinRows="6" cdkAutosizeMinRows="10" required></textarea>
+      <mat-error>Query is required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button class="orderButton" [disabled]="myForm.invalid" (click)="sendMessage()">Send Message</button>
+    <p *ngIf="sent">Your message has been sent. We will get back to you as soon as possible!</p>
+  </form>
+</div>

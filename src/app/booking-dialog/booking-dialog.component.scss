@@ -1,0 +1,35 @@
+h1 {
+  color: greenyellow;
+  font-size: 32px;
+}
+
+h2 {
+  color: white;
+}
+
+.formInput{
+  color: white;
+  padding-right: 30px;
+}
+
+input:focus {
+  color: greenyellow;
+}
+
+.orderButton{
+  color: #131517;
+  background: greenyellow;
+  width: 180px;
+}
+
+.cancelButton{
+  color: greenyellow;
+  background: #131517;
+  width: 180px;
+  margin-right: 30px;
+}
+
+.buttons {
+  padding-top: 40px;
+  padding-left: 220px;
+}

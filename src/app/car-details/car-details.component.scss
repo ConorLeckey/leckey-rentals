@@ -1,0 +1,36 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10vh;
+  display: flex;
+
+  .column {
+    flex: 1;
+    max-width: 50vw;
+  }
+}
+
+.car-image {
+  max-width: 100%
+}
+
+.car-name {
+  width: 100%;
+}
+
+.details {
+  display: block;
+}
+
+mat-form-field {
+  padding-top: 16px;
+}
+
+button {
+  color: yellowgreen;
+  background-color: #444444;
+}
+
+p {
+  padding-right: 120px;
+}

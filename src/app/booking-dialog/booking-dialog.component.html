@@ -1,0 +1,61 @@
+<div id="bookingDialog" *ngIf="!confirmed">
+  <h1>{{data.name}} - Booking Form</h1>
+
+  <form [formGroup]="myForm">
+
+    <div id="rentalDetails">
+      <h2>Rental details</h2>
+      <mat-form-field class="formInput">
+        <input matInput type="date" placeholder="Start Date">
+      </mat-form-field>
+      <mat-form-field class="formInput">
+        <mat-select placeholder="Collection/Delivery" required formControl="collectOrDeliver">
+          <mat-option value="collect">Collect from garage</mat-option>
+          <mat-option value="deliver">Custom delivery location</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formInput" *ngIf="myForm.controls['collectOrDeliver'].value === 'deliver'">
+        <input matInput type="text" placeholder="First Name" formControlName="deliveryAddress">
+        <mat-error *ngIf="!myForm.controls['deliveryAddress'].value">Deliver address is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div id="contactDetials">
+      <h2>Contact details</h2>
+      <mat-form-field class="formInput">
+        <input matInput type="text" placeholder="First Name" required formControlName="firstname">
+        <mat-error>Given name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="formInput">
+        <input matInput type="text" placeholder="Last Name" required formControlName="lastname">
+        <mat-error>Last name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="formInput">
+        <input matInput type="date" placeholder="Date of Birth">
+      </mat-form-field>
+      <mat-form-field class="formInput">
+        <input matInput type="email" placeholder="Email Address" formControlName="email" required>
+        <mat-error *ngIf="myForm.controls['email'].hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="myForm.controls['email'].hasError('email')">Email must be valid</mat-error>
+      </mat-form-field>
+      <mat-form-field class="formInput">
+        <input matInput type="tel" placeholder="Phone Number">
+      </mat-form-field>
+
+      <div class="buttons">
+        <button mat-raised-button class="cancelButton" (click)="closeDialog()">Cancel</button>
+        <button mat-raised-button class="orderButton" [disabled]="myForm.invalid" (click)="confirmed = true">Place
+          Order
+        </button>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+<div id="confirmation" *ngIf="confirmed">
+  <h1>Order submitted</h1>
+  <p>Thank you for submitting an order! <br> Your rental request has been made, and we will be in contact with
+    you shortly via email.</p>
+  <button mat-raised-button class="orderButton" (click)="closeDialog()">Ok</button>
+</div>
