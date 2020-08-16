@@ -11,7 +11,7 @@ export class CarDetailsRouteActivatorService implements CanActivate {
   constructor(private carService: CarService, private router: Router) {
   }
 
-  canActivate(route: ActivatedRouteSnapshot) {
+  canActivate(route: ActivatedRouteSnapshot) { // Determines whether to navigate to the car details page or 404
     const carExists = !!this.carService.getCar(+route.params.id);
 
     if (!carExists) {
