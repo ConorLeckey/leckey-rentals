@@ -1,18 +1,12 @@
 import {Injectable} from '@angular/core';
-import {Observable, Subject} from 'rxjs';
 import {ICar} from '../models/car.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarService {
-  getCars(): Observable<ICar[]> {
-    const subject = new Subject<ICar[]>();
-    setTimeout(() => {
-      subject.next(cars);
-      subject.complete();
-    }, 100);
-    return subject;
+  getCars(): ICar[] { // Returns array of Cars
+    return cars;
   }
 
   getCar(id): ICar {
@@ -20,7 +14,7 @@ export class CarService {
   }
 }
 
-const cars: ICar[] = [
+const cars: ICar[] = [ // Json array of cars (in place of an api call to backend)
   {
     id: 1,
     name: 'Lamborghini Huracan',
