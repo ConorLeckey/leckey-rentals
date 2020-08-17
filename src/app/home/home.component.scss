@@ -3,11 +3,10 @@
   width: 100%;
   text-align: left;
 
-  //background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: background-image 1s;
+  transition: background-image 1s ease-out;
 
 }
 
@@ -57,5 +56,5 @@ button {
 }
 
 .lorem {
-  padding: 0 50px;
+  padding: 0 250px;
 }

@@ -3,12 +3,15 @@
   <span class="logo-span"></span><img class="logo" (click)="scrollTo('home')" [routerLink]="['home']" src="assets/logo.png" aria-label="Leckey Rentals Logo"/>
 
   <span class="navbar-right" fxFlex="1 1 auto">
-    <ng-container class="pepe" *ngFor="let option of optionArray">
+    <ng-container class="nav-buttons" *ngFor="let option of optionArray">
       <a *ngIf="option.color == 'G'" class="nav-option green" fxFlex="1 0 auto" (click)="scrollTo('cars')" [routerLink]="['/home']" routerLinkActive="active">{{option.text}}</a>
       <a *ngIf="option.text == 'Home'" class="nav-option white" fxFlex="1 0 auto" (click)="scrollTo('home')" [routerLink]="['/home']" routerLinkActive="active">{{option.text}}</a>
       <a *ngIf="option.text != 'Home' && option.color == 'W'" class="nav-option white" fxFlex="1 0 auto" [routerLink]="['/' + option.href + '']">{{option.text}}</a>
     </ng-container>
   </span>
+  <p id="name">Hello{{name}}<br />Today is {{date | date:'mediumDate'}}</p>
+
 </mat-toolbar>
 
-<div class="spacer"></div>
+<div class="spacer">
+</div>

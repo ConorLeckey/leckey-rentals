@@ -6,10 +6,12 @@ import {ScrollService} from '../services/scroll.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
   public height; // This height is used by the navbar to determine its height in pixels
   private bannerVH = 0.65; // This value is the proportion of the screen at which the bottom of the banner is (65%) down the screen
+  name = ' there!';
+  date = new Date();
 
   @ViewChild('navbar') navbar: HTMLElement;
 
@@ -67,4 +69,9 @@ export class NavbarComponent {
     this.scroll.triggerScroll(value);
   }
 
+  ngOnInit() {
+    if (localStorage.getItem('name')) {
+      this.name = ', ' + localStorage.getItem('name');
+    }
+  }
 }

@@ -19,32 +19,26 @@ export class TeamComponent implements AfterViewInit { // This class has no js/ts
   ngAfterViewInit() { // Called after the view completely loads
     this.team = [ // Details for each team member
       {
-        name: 'John Ibeth',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam architecto atque autem, beatae ' +
-          'blanditiis consequatur cum deserunt dolore dolorem doloremque ea eaque earum eius ex excepturi explicabo fugiat fugit hic id ' +
-          'iusto laudantium molestias, neque nihil nisi odio officiis perspiciatis praesentium quae quisquam rem sequi similique tempore,' +
-          ' velit? A ab, accusamus ad aliquid animi asperiores at atque deserunt dolor eligendi error esse est fugiat harum inventore ' +
-          'iure laudantium magnam minima molestias nam nulla odio omnis porro praesentium reprehenderit saepe sint, suscipit tempore?',
+        name: 'John Leckey',
+        description: 'Ibeth is the proud CEO of Leckey Rentals. He has a massive 30 days experience in pedalling overpriced rental cars. ' +
+          'Ibeth takes great pride in his ability to sit on his butt 8 hours a day in the office. He obtained his degree in Sales from ' +
+          'Totally-A-Real University in Atlantis.',
         img: 'man',
         elements: this.team0
       },
       {
         name: 'Cody Monkeyshire',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam architecto atque autem, beatae ' +
-          'blanditiis consequatur cum deserunt dolore dolorem doloremque ea eaque earum eius ex excepturi explicabo fugiat fugit hic id ' +
-          'iusto laudantium molestias, neque nihil nisi odio officiis perspiciatis praesentium quae quisquam rem sequi similique tempore,' +
-          ' velit? A ab, accusamus ad aliquid animi asperiores at atque deserunt dolor eligendi error esse est fugiat harum inventore ' +
-          'iure laudantium magnam minima molestias nam nulla odio omnis porro praesentium reprehenderit saepe sint, suscipit tempore?',
+        description: 'Monkeyshire is exactly what you\'d expect from the name. His sales skills are almost as good as an adult chimp\'s. ' +
+          'He has literally no past experience working in selling anything and has produced nothing for the company so far. He might' +
+          ' actually be a monkey, he\'s pretty hairy and only eats bananas for lunch.',
         img: 'man',
         elements: this.team1
       },
       {
         name: 'Jack Dorsetson',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aperiam architecto atque autem, beatae ' +
-          'blanditiis consequatur cum deserunt dolore dolorem doloremque ea eaque earum eius ex excepturi explicabo fugiat fugit hic id ' +
-          'iusto laudantium molestias, neque nihil nisi odio officiis perspiciatis praesentium quae quisquam rem sequi similique tempore,' +
-          ' velit? A ab, accusamus ad aliquid animi asperiores at atque deserunt dolor eligendi error esse est fugiat harum inventore ' +
-          'iure laudantium magnam minima molestias nam nulla odio omnis porro praesentium reprehenderit saepe sint, suscipit tempore?',
+        description: 'This guy doesn\'t even speak english, we aren\'t really sure how he even got the job. As you might be able to ' +
+          'tell at this point, Leckey Rentals doesnt have very high standards for employees. Makes a lot of sense considering we only ' +
+          'offer to pay £2 an hour.',
         img: 'man',
         elements: this.team2
       },

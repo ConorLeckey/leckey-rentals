@@ -19,11 +19,11 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   sendMessage() {
+    localStorage.setItem('name', this.myForm.controls.name.value);
     this.myForm.reset();
     this.sent = true; // This bool triggers the sent message to appear on the screen
   }
 
   ngOnInit() {
   }
-
 }
